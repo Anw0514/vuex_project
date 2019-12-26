@@ -16,9 +16,9 @@ import { mapActions } from 'vuex'
 export default {
     name: "AddTodo",
     data() {
-        return {
-            title: ''
-        }
+      return {
+        title: ''
+      }
     },
     methods: {
         ...mapActions(['addTodo']),
