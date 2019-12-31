@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div class="container">
-      <AddTodo />
-      <FilterTodos />
+      <router-link class="todo" to="/filter">Filter</router-link>
+      <router-link class="todo" to="/add">Add</router-link>
+      <router-view></router-view>
       <Todos />
     </div>
   </div>
@@ -10,15 +11,11 @@
 
 <script>
 import Todos from './components/Todos.vue'
-import AddTodo from './components/AddTodo.vue'
-import FilterTodos from './components/FilterTodos.vue'
 
 export default {
   name: 'app',
   components: {
-    Todos,
-    AddTodo,
-    FilterTodos
+    Todos
   }
 }
 </script>
@@ -34,5 +31,16 @@ body {
   margin: auto;
   overflow: auto;
   padding: 0 2rem;
+}
+.todo {
+  border: 1px solid #ccc;
+  background: #41b883;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  color: black
 }
 </style>
